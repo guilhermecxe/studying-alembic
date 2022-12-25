@@ -31,3 +31,9 @@
     ```
     $ alembic upgrade heads
     ```
+
+## Erros
+
+- "No support for ALTER of constraints in SQLite dialect"
+    - Solução: editar "env.py" adicionando `render_as_batch=True` em `context.configure`.
+    - Fonte: https://stackoverflow.com/questions/30378233/sqlite-lack-of-alter-support-alembic-migration-failing-because-of-this-solutio
